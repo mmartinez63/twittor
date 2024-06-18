@@ -1,6 +1,7 @@
 //* Imports
 
-importScripts('/js/sw-utils.js');
+// importScripts('/js/sw-utils.js');
+importScripts('js/sw-utils.js'); //* Aquí expresamos lo mismo pero sin la raíz del sitio. Ojo con esto!!!
 
 
 const STATIC_CACHE    = 'static-v2';
@@ -8,19 +9,36 @@ const DYNAMIC_CACHE   = 'dynamic-v1';
 const INMUTABLE_CACHE = 'inmutable-v1';
 
 //? Pasamos a definir los arreglos de todos los request que ocupa la aplicación web. Es decir, la columna vertebral de la app que estamos convirtiendo a PWA:
+//! Ojo: Cuando se va  a desplegar esta app desde Git-Hub, no debe haber la / que indica raíz del sitio
+
 
 const APP_SHELL = [
     // '/',
-    '/index.html',
-    '/css/style.css',
-    '/img/favicon.ico',
-    '/img/avatars/hulk.jpg',
-    '/img/avatars/ironman.jpg',
-    '/img/avatars/spiderman.jpg',
-    '/img/avatars/thor.jpg',
-    '/img/avatars/wolverine.jpg',
-    '/js/app.js',
-    '/js/sw-utils.js'
+    // '/index.html',
+    // '/css/style.css',
+    // '/img/favicon.ico',
+    // '/img/avatars/hulk.jpg',
+    // '/img/avatars/ironman.jpg',
+    // '/img/avatars/spiderman.jpg',
+    // '/img/avatars/thor.jpg',
+    // '/img/avatars/wolverine.jpg',
+    // '/js/app.js',
+    // '/js/sw-utils.js'
+
+
+    'index.html',
+    'css/style.css',
+    'img/favicon.ico',
+    'img/avatars/hulk.jpg',
+    'img/avatars/ironman.jpg',
+    'img/avatars/spiderman.jpg',
+    'img/avatars/thor.jpg',
+    'img/avatars/wolverine.jpg',
+    'js/app.js',
+    'js/sw-utils.js'
+
+
+
 ];
 
 //? En el caché inmutable se almacenan todos los request que no se van a modificar durante la ejecución de la app-web
