@@ -1,7 +1,21 @@
 //gatito-> Como paso inicial Registramos nuestro sw:
 
+//? https://mmartinez63.github.io/twittor/       twittor es el nombre del repositorio dentro de Git-Hub
+
+let url = window.location.href;
+let swLocation = '/twittor/sw.js'; //! Aquí se asigna digamos el nombre del repositorio que usamos para subir a Git-Hub
+
+
 if( navigator.serviceWorker ){
-    navigator.serviceWorker.register('/sw.js');
+
+    //* Validamos si estamos haciendo pruebas en nuestro equipo local o si estamos ya en Git-Hub u otro hosting-service
+
+    if( url.includes('localhost') ){
+        //* Estamos trabajando localmente
+        swLocation = '/sw.js';
+    }
+
+    navigator.serviceWorker.register(swLocation);
 }
 
 // Referencias de jQuery

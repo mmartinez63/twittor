@@ -10,7 +10,7 @@ const INMUTABLE_CACHE = 'inmutable-v1';
 //? Pasamos a definir los arreglos de todos los request que ocupa la aplicación web. Es decir, la columna vertebral de la app que estamos convirtiendo a PWA:
 
 const APP_SHELL = [
-    '/',
+    // '/',
     '/index.html',
     '/css/style.css',
     '/img/favicon.ico',
