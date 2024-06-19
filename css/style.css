@@ -11,6 +11,7 @@
     font-size: 16px;
     background-color: #dde1e2; 
     width: 100%;
+    overscroll-behavior-y: contain; /* Esta línea es para evitar la actualización de la app cuando hay scroll en un disp móbil */
 }
 
 /* Personalizados */

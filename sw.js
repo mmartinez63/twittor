@@ -1,10 +1,10 @@
 //* Imports
 
 // importScripts('/js/sw-utils.js');
-importScripts('js/sw-utils.js'); //* Aquí expresamos lo mismo pero sin la raíz del sitio. Ojo con esto!!!
+importScripts('js/sw-utils.js'); //* Aquí expresamos la misma impportación pero sin la raíz del sitio. Ojo con esto!!!
 
 
-const STATIC_CACHE    = 'static-v2';
+const STATIC_CACHE    = 'static-v3';
 const DYNAMIC_CACHE   = 'dynamic-v1';
 const INMUTABLE_CACHE = 'inmutable-v1';
 
@@ -13,6 +13,9 @@ const INMUTABLE_CACHE = 'inmutable-v1';
 
 
 const APP_SHELL = [
+
+    //gatito-> Lo que está comentado debe ir cuando estamos trabajando localmente
+
     // '/',
     // '/index.html',
     // '/css/style.css',
@@ -26,6 +29,7 @@ const APP_SHELL = [
     // '/js/sw-utils.js'
 
 
+    //gatito-> Observa que cuando vas a desplegar a producción ya no lleva el / al inicio
     'index.html',
     'css/style.css',
     'img/favicon.ico',
